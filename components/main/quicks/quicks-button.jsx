@@ -23,7 +23,18 @@ const QuicksButton = ({ keyProp, label, svgIcon, activatedBg, isActive }) => {
         </Button>
         <Button
           className={`relative z-10 rounded-full py-6 px-4 ${
-            isActive ? activatedBg : "bg-white"
+            isActive
+              ? (() => {
+                  switch (keyProp) {
+                    case 0:
+                      return "bg-indicator-blue";
+                    case 1:
+                      return "bg-indicator-orange";
+                    default:
+                      return ""; // Return null if no valid case is matched
+                  }
+                })()
+              : "bg-white"
           }`}
           onClick={() => activateQuicks(keyProp)}
         >

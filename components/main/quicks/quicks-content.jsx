@@ -13,7 +13,7 @@ const QuicksContent = () => {
       <Card
         className={`${
           currentContent < 0 ? "hidden" : ""
-        } lg:w-[650px] w-[350px] h-[500px] bg-white me-5 overflow-auto`}
+        } lg:w-[650px] w-[340px] h-[500px] bg-white mx-5 overflow-auto`}
       >
         <CardContent>
           {(() => {

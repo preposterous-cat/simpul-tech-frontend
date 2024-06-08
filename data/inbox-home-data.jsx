@@ -1,13 +1,13 @@
 const inboxHomeData = [
   {
     group_name: "NextJS Community",
-    last_person: "Arizli R",
+    last_person: "Cameron Philips",
     last_chat: "Please check this out",
     last_date_time: "January 1, 2024 19:10",
     isNewChat: true,
     chats: [
       {
-        name: "Arizli R",
+        name: "You",
         message: "Hello everyone!",
         date: "2024-01-01",
         time: "18:00",
@@ -21,7 +21,7 @@ const inboxHomeData = [
         isReaded: true,
       },
       {
-        name: "John Doe",
+        name: "You",
         message: "Looks good!",
         date: "2024-01-01",
         time: "18:15",
@@ -35,7 +35,7 @@ const inboxHomeData = [
         isReaded: true,
       },
       {
-        name: "Arizli R",
+        name: "Cameron Philips",
         message: "Please check this out",
         date: "2024-01-01",
         time: "19:10",
@@ -59,7 +59,7 @@ const inboxHomeData = [
         isReaded: true,
       },
       {
-        name: "Sarah Connor",
+        name: "You",
         message: "Good morning!",
         date: "2024-01-11",
         time: "09:10",
@@ -73,7 +73,7 @@ const inboxHomeData = [
         isReaded: true,
       },
       {
-        name: "Kyle Reese",
+        name: "You",
         message: "We're making good progress.",
         date: "2024-01-11",
         time: "09:30",
@@ -104,14 +104,14 @@ const inboxHomeData = [
         isReaded: true,
       },
       {
-        name: "Linda Hamilton",
+        name: "You",
         message: "Good evening!",
         date: "2024-03-01",
         time: "00:05",
         isReaded: true,
       },
       {
-        name: "Michael Biehn",
+        name: "You",
         message: "Any updates on the project?",
         date: "2024-03-01",
         time: "00:10",

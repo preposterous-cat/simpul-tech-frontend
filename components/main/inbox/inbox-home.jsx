@@ -32,14 +32,14 @@ const InboxHome = () => {
       {isLoading ? (
         <Loading text={"Loading Chats..."} />
       ) : (
-        <div className="flex flex-col">
+        <div className="flex flex-col ">
           {inboxHomeData?.map((item, idx) => (
             <button
               className="flex justify-between border-b-2 border-primary-foreground text-start"
               key={idx}
               onClick={() => openChatHandler(idx)}
             >
-              <div className="flex flex-row gap-x-4 gap-y-0 py-[22px] ">
+              <div className="flex flex-row gap-x-4 gap-y-0 py-[22px]">
                 <AvatarIcon />
                 <GroupInfo
                   groupName={item.group_name}
@@ -67,7 +67,7 @@ const InboxHome = () => {
 
 const GroupInfo = ({ groupName, lastPerson, lastChat, lastDateTime }) => (
   <div className="flex flex-col ">
-    <div className="flex flex-row gap-3 items-center ">
+    <div className="flex flex-row gap-3 items-center">
       <div className="text-primary font-bold" style={{ fontSize: "16px" }}>
         {groupName}
       </div>
@@ -86,7 +86,7 @@ const GroupInfo = ({ groupName, lastPerson, lastChat, lastDateTime }) => (
       {lastPerson}
     </div>
     <div
-      className="text-primary-foreground font-normal truncate max-w-[400px]"
+      className="text-primary-foreground font-normal truncate lg:max-w-[400px] max-w-[200px]"
       style={{ fontSize: "14px" }}
     >
       {lastChat}
