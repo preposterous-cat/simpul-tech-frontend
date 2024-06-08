@@ -11,7 +11,7 @@ const QuicksButton = ({ keyProp, label, svgIcon, activatedBg, isActive }) => {
         !isShowQuicks ? "hidden" : ""
       } flex flex-col text-center gap-2`}
     >
-      <Label className="text-white">{label}</Label>
+      <Label className="text-white font-bold">{label}</Label>
       <div className="relative inline-block">
         <Button
           onClick={closeQuicks}

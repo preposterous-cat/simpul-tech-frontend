@@ -18,7 +18,7 @@ const quicksData = [
       </svg>
     ),
     isActive: false,
-    activatedBg: "bg-indicator-blue",
+    activatedBg: `bg-indicator-blue`,
   },
   {
     label: "Task",
@@ -39,7 +39,7 @@ const quicksData = [
       </svg>
     ),
     isActive: false,
-    activatedBg: "bg-indicator-orange",
+    activatedBg: `bg-indicator-orange`,
   },
 ];
 

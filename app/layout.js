@@ -2,7 +2,7 @@ import { Lato } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const lato = Lato({ subsets: ["latin"], weight: "700" });
+const lato = Lato({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
   title: "Simpul Technology Front End",

@@ -1,16 +1,21 @@
 "use client";
 
+import { useEffect } from "react";
 import { Button } from "../../ui/button";
 import QuicksButton from "./quicks-button";
 import { useQuicksContext } from "./quicks-context";
 
 const QuicksBar = () => {
   const { quicks, showQuicks } = useQuicksContext();
+
+  useEffect(() => {
+    console.log(quicks);
+  }, [quicks]);
   return (
     <div className=" flex flex-row-reverse m-4 gap-6">
-      <Button className="rounded-full py-6 px-4 self-end" onClick={showQuicks}>
+      <Button className="rounded-full py-6 px-5 self-end" onClick={showQuicks}>
         <svg
-          width="14"
+          width="12"
           height="25"
           viewBox="0 0 18 32"
           fill="none"
