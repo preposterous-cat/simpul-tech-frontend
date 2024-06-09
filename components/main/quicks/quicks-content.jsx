@@ -13,7 +13,7 @@ const QuicksContent = () => {
       <Card
         className={`${
           currentContent < 0 ? "hidden" : ""
-        } lg:w-[650px] w-[340px] h-[500px] bg-white mx-5 overflow-auto`}
+        } md:w-[650px] w-[340px] h-[400px] bg-white mx-5 overflow-auto`}
       >
         <CardContent>
           {(() => {
@@ -23,7 +23,7 @@ const QuicksContent = () => {
               case 1:
                 return <Task />;
               default:
-                return null; // Return null if no valid case is matched
+                return null;
             }
           })()}
         </CardContent>

@@ -21,7 +21,7 @@ export function QuicksProvider({ children }) {
     setQuicks((prevData) =>
       prevData.map((item, i) => ({
         ...item,
-        isActive: i === index, // Set isActive ke true untuk item yang diklik
+        isActive: i === index,
       }))
     );
     setCurrentContent(index);

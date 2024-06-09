@@ -156,7 +156,7 @@ const OptionChat = () => (
         <FiMoreHorizontal />
       </button>
     </DropdownMenuTrigger>
-    <DropdownMenuContent className="bg-white">
+    <DropdownMenuContent className="bg-white border border-primary-foreground">
       <DropdownMenuGroup>
         <DropdownMenuItem>
           <button className="text-primary">Edit</button>

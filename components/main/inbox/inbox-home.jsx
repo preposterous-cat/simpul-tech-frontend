@@ -16,9 +16,6 @@ const InboxHome = () => {
     setChatData(inboxHomeData[index]);
   };
 
-  // Data dummy untuk loop sebanyak 5 kali
-  const dummyData = new Array(5).fill(null);
-
   return (
     <div className="flex flex-col py-[24px] px-[32px]">
       <div className="relative w-full">
@@ -35,7 +32,7 @@ const InboxHome = () => {
         <div className="flex flex-col ">
           {inboxHomeData?.map((item, idx) => (
             <button
-              className="flex justify-between border-b-2 border-primary-foreground text-start"
+              className="flex justify-between border-b border-primary-foreground text-start"
               key={idx}
               onClick={() => openChatHandler(idx)}
             >
