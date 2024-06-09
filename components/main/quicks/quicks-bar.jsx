@@ -7,10 +7,6 @@ import { useQuicksContext } from "./quicks-context";
 
 const QuicksBar = () => {
   const { quicks, showQuicks } = useQuicksContext();
-
-  useEffect(() => {
-    console.log(quicks);
-  }, [quicks]);
   return (
     <div className=" flex flex-row-reverse m-4 gap-6">
       <Button className="rounded-full py-6 px-5 self-end" onClick={showQuicks}>
