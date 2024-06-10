@@ -45,8 +45,9 @@ export function TaskProvider({ children }) {
     setNewDesc("");
   };
 
-  const editingHandler = () => {
+  const editingHandler = (defaultDesc) => {
     setIsEditing(!isEditing);
+    setNewDesc(defaultDesc);
   };
 
   const addNewTask = () => {
@@ -61,35 +62,29 @@ export function TaskProvider({ children }) {
     setTaskList((prevData) => [...prevData, newTask]);
   };
 
-  const bookmarkHandler = (index, currentSelected, taskidx) => {
-    setStickerList((prevData) =>
+  const bookmarkHandler = (index, taskidx) => {
+    // if (!currentSelected) {
+    setTaskList((prevData) =>
       prevData.map((item, i) =>
-        i === index ? { ...item, isSelected: !currentSelected } : item
+        taskidx === i
+          ? { ...item, bookmarks: [...item.bookmarks, stickerList[index]] }
+          : item
       )
     );
-
-    if (!currentSelected) {
-      setTaskList((prevData) =>
-        prevData.map((item, i) =>
-          taskidx === index
-            ? { ...item, bookmarks: [...item.bookmarks, stickerList[index]] }
-            : item
-        )
-      );
-    } else {
-      setTaskList((prevData) =>
-        prevData.map((item, i) =>
-          taskidx === index
-            ? {
-                ...item,
-                bookmarks: item.bookmarks.filter(
-                  (bookmark) => bookmark !== stickerList[index]
-                ),
-              }
-            : item
-        )
-      );
-    }
+    // } else {
+    //   setTaskList((prevData) =>
+    //     prevData.map((item, i) =>
+    //       taskidx === index
+    //         ? {
+    //             ...item,
+    //             bookmarks: item.bookmarks.filter(
+    //               (bookmark) => bookmark !== stickerList[index]
+    //             ),
+    //           }
+    //         : item
+    //     )
+    //   );
+    // }
 
     console.log(taskList);
   };

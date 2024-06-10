@@ -228,7 +228,7 @@ const TaskArea = () => {
                           ? "text-primary"
                           : "text-primary-background"
                       } text-lg`}
-                      onClick={editingHandler}
+                      onClick={() => editingHandler(item.desc)}
                     />
                     {isEditing ? (
                       <textarea
@@ -239,18 +239,18 @@ const TaskArea = () => {
                         defaultValue={item.desc}
                       ></textarea>
                     ) : (
-                      <p onClick={editingHandler}>
+                      <p onClick={() => editingHandler(item.desc)}>
                         {item.desc != "" ? item.desc : "No Description"}
                       </p>
                     )}
                   </div>
                   <Popover>
-                    <PopoverTrigger className="flex flex-row bg-gray-100 p-2 items-center gap-4">
+                    <PopoverTrigger className="flex flex-row bg-gray-100 p-2 items-center gap-4 overflow-x-auto w-full">
                       <BsBookmarks className="text-primary" />
                       {item?.bookmarks.map((bookmark, bookidx) => (
                         <div
                           key={bookidx}
-                          className="p-2 text-sm text-primary-background font-bold"
+                          className="p-2 text-sm text-primary-background font-bold min-w-36"
                           style={{
                             backgroundColor: `var(${bookmark.color})`,
                           }}
@@ -264,12 +264,8 @@ const TaskArea = () => {
                         {stickerList?.map((sticker, stickeridx) => (
                           <button
                             key={stickeridx}
-                            onClick={() =>
-                              bookmarkHandler(stickeridx, sticker.isSelected, i)
-                            }
-                            className={`p-2 text-sm text-start text-primary-background font-bold rounded-lg ${
-                              sticker.isSelected ? "ring-1 ring-primary" : ""
-                            }`}
+                            onClick={() => bookmarkHandler(stickeridx, i)}
+                            className={`p-2 text-sm text-start text-primary-background font-bold rounded-lg`}
                             style={{ backgroundColor: `var(${sticker.color})` }}
                           >
                             {sticker.text}
