@@ -16,7 +16,7 @@ import { format, isToday } from "date-fns";
 import React, { useEffect, useRef, useState } from "react";
 import userColors from "@/data/user-colors";
 
-const InboxChat = ({ groupName }) => {
+const InboxChat = () => {
   const { chatData, setIsOpenChat, setChatData, newReply, setNewReply } =
     useInboxContext();
   const [isSeparatorOutOfView, setIsSeparatorOutOfView] = useState(false);
