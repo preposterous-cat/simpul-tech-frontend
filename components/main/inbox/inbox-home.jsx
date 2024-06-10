@@ -17,7 +17,7 @@ const InboxHome = () => {
   };
 
   return (
-    <div className="flex flex-col py-[24px] px-[32px]">
+    <div className="flex flex-col py-[24px] px-[32px] items-stretch">
       <div className="relative w-full">
         <Input
           className="py-0 px-10 border-primary-foreground focus-visible:ring-0 h-7 placeholder:text-black" // Add padding to the right

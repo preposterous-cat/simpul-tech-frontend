@@ -12,6 +12,7 @@ const inboxHomeData = [
         date: "2024-01-01",
         time: "18:00",
         isReaded: true,
+        replyFrom: "",
       },
       {
         name: "Cameron Philips",
@@ -19,6 +20,7 @@ const inboxHomeData = [
         date: "2024-01-01",
         time: "18:05",
         isReaded: true,
+        replyFrom: "",
       },
       {
         name: "You",
@@ -26,6 +28,7 @@ const inboxHomeData = [
         date: "2024-01-01",
         time: "18:15",
         isReaded: true,
+        replyFrom: "",
       },
       {
         name: "Jane Smith",
@@ -33,6 +36,7 @@ const inboxHomeData = [
         date: "2024-01-01",
         time: "18:20",
         isReaded: true,
+        replyFrom: "",
       },
       {
         name: "Cameron Philips",
@@ -40,6 +44,7 @@ const inboxHomeData = [
         date: "2024-01-01",
         time: "19:10",
         isReaded: false,
+        replyFrom: "",
       },
     ],
   },
@@ -57,6 +62,7 @@ const inboxHomeData = [
         date: "2024-01-11",
         time: "09:00",
         isReaded: true,
+        replyFrom: "",
       },
       {
         name: "You",
@@ -64,6 +70,7 @@ const inboxHomeData = [
         date: "2024-01-11",
         time: "09:10",
         isReaded: true,
+        replyFrom: "",
       },
       {
         name: "John Connor",
@@ -71,6 +78,7 @@ const inboxHomeData = [
         date: "2024-01-11",
         time: "09:20",
         isReaded: true,
+        replyFrom: "",
       },
       {
         name: "You",
@@ -78,6 +86,7 @@ const inboxHomeData = [
         date: "2024-01-11",
         time: "09:30",
         isReaded: true,
+        replyFrom: "",
       },
       {
         name: "Neils Nielson",
@@ -86,6 +95,7 @@ const inboxHomeData = [
         date: "2024-01-11",
         time: "10:00",
         isReaded: true,
+        replyFrom: "",
       },
     ],
   },
@@ -102,6 +112,7 @@ const inboxHomeData = [
         date: "2024-03-01",
         time: "00:00",
         isReaded: true,
+        replyFrom: "",
       },
       {
         name: "You",
@@ -109,6 +120,7 @@ const inboxHomeData = [
         date: "2024-03-01",
         time: "00:05",
         isReaded: true,
+        replyFrom: "",
       },
       {
         name: "You",
@@ -116,6 +128,7 @@ const inboxHomeData = [
         date: "2024-03-01",
         time: "00:10",
         isReaded: true,
+        replyFrom: "",
       },
       {
         name: "Sigourney Weaver",
@@ -123,6 +136,7 @@ const inboxHomeData = [
         date: "2024-03-01",
         time: "00:15",
         isReaded: true,
+        replyFrom: "",
       },
       {
         name: "Ken Aerox",
@@ -130,6 +144,33 @@ const inboxHomeData = [
         date: "2024-03-01",
         time: "00:20",
         isReaded: true,
+        replyFrom: "",
+      },
+    ],
+  },
+  {
+    group_name: "FastVisa Support",
+    last_person: "You",
+    last_chat: "Hi. I need help with something can you help me?",
+    last_date_time: "March 1, 2024 19.40",
+    isNewChat: false,
+    chats: [
+      {
+        name: "FastVisa Support",
+        message:
+          "Hey there. Welcome to your inbox! Contact us for more information and help about anything! We'll send you a response as soon as possible.",
+        date: "2024-03-01",
+        time: "19.40",
+        isReaded: true,
+        replyFrom: "",
+      },
+      {
+        name: "You",
+        message: "Hi. I need help with something can you help me?",
+        date: "2024-03-01",
+        time: "19.40",
+        isReaded: true,
+        replyFrom: "",
       },
     ],
   },

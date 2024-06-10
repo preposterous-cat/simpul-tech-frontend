@@ -6,6 +6,7 @@ const userColors = {
   "John Connor": ["--chats-green", "--chats-lightgreen"],
   "Sigourney Weaver": ["--chats-green", "--chats-lightgreen"],
   "Ken Aerox": ["--chats-yellow", "--chats-lightyellow"],
+  "FastVisa Support": ["--primary", "--primary-text"],
 };
 
 export default userColors;

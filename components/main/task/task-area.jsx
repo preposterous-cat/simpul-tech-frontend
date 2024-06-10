@@ -51,7 +51,6 @@ const TaskArea = () => {
     editingHandler,
     taskList,
     setTaskList,
-    newDesc,
     newDescHandler,
     changeDescHandler,
     addNewTask,
