@@ -1,5 +1,6 @@
 "use client";
 
+import stickersData from "@/data/stickers-data";
 import taskListData from "@/data/task-list-data";
 
 const { createContext, useContext, useState } = require("react");
@@ -16,6 +17,7 @@ export function TaskProvider({ children }) {
   const [isEditing, setIsEditing] = useState(false);
   const [taskList, setTaskList] = useState(taskListData);
   const [newDesc, setNewDesc] = useState("");
+  const [stickerList, setStickerList] = useState(stickersData);
 
   const collapseHandler = () => {
     setIsCollapse(!isCollapse);
@@ -59,6 +61,39 @@ export function TaskProvider({ children }) {
     setTaskList((prevData) => [...prevData, newTask]);
   };
 
+  const bookmarkHandler = (index, currentSelected, taskidx) => {
+    setStickerList((prevData) =>
+      prevData.map((item, i) =>
+        i === index ? { ...item, isSelected: !currentSelected } : item
+      )
+    );
+
+    if (!currentSelected) {
+      setTaskList((prevData) =>
+        prevData.map((item, i) =>
+          taskidx === index
+            ? { ...item, bookmarks: [...item.bookmarks, stickerList[index]] }
+            : item
+        )
+      );
+    } else {
+      setTaskList((prevData) =>
+        prevData.map((item, i) =>
+          taskidx === index
+            ? {
+                ...item,
+                bookmarks: item.bookmarks.filter(
+                  (bookmark) => bookmark !== stickerList[index]
+                ),
+              }
+            : item
+        )
+      );
+    }
+
+    console.log(taskList);
+  };
+
   return (
     <TaskContext.Provider
       value={{
@@ -71,12 +106,15 @@ export function TaskProvider({ children }) {
         isEditing,
         setIsEditing,
         newDesc,
+        stickerList,
+        setStickerList,
         newDescHandler,
         collapseHandler,
         checkedHandler,
         editingHandler,
         changeDescHandler,
         addNewTask,
+        bookmarkHandler,
       }}
     >
       {children}

@@ -14,14 +14,15 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import {
+  FiBookmark,
   FiCalendar,
   FiChevronDown,
   FiChevronUp,
   FiClock,
-  FiEdit,
-  FiEdit2,
   FiMoreHorizontal,
 } from "react-icons/fi";
+import { BsBookmarks } from "react-icons/bs";
+
 import { format } from "date-fns";
 
 import { Calendar } from "@/components/ui/calendar";
@@ -39,6 +40,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { MdOutlineEdit } from "react-icons/md";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import stickersData from "@/data/stickers-data";
 
 const TaskArea = () => {
   const {
@@ -54,6 +56,8 @@ const TaskArea = () => {
     newDescHandler,
     changeDescHandler,
     addNewTask,
+    stickerList,
+    bookmarkHandler,
   } = useTaskContext();
 
   const setDate = (index, newDate) => {
@@ -240,6 +244,40 @@ const TaskArea = () => {
                       </p>
                     )}
                   </div>
+                  <Popover>
+                    <PopoverTrigger className="flex flex-row bg-gray-100 p-2 items-center gap-4">
+                      <BsBookmarks className="text-primary" />
+                      {item?.bookmarks.map((bookmark, bookidx) => (
+                        <div
+                          key={bookidx}
+                          className="p-2 text-sm text-primary-background font-bold"
+                          style={{
+                            backgroundColor: `var(${bookmark.color})`,
+                          }}
+                        >
+                          {bookmark.text}
+                        </div>
+                      ))}
+                    </PopoverTrigger>
+                    <PopoverContent className="p-3 border border-primary-foreground bg-white">
+                      <div className="flex flex-col gap-2 ">
+                        {stickerList?.map((sticker, stickeridx) => (
+                          <button
+                            key={stickeridx}
+                            onClick={() =>
+                              bookmarkHandler(stickeridx, sticker.isSelected, i)
+                            }
+                            className={`p-2 text-sm text-start text-primary-background font-bold rounded-lg ${
+                              sticker.isSelected ? "ring-1 ring-primary" : ""
+                            }`}
+                            style={{ backgroundColor: `var(${sticker.color})` }}
+                          >
+                            {sticker.text}
+                          </button>
+                        ))}
+                      </div>
+                    </PopoverContent>
+                  </Popover>
                 </CollapsibleContent>
               </div>
             </Collapsible>
